@@ -11,6 +11,7 @@ var num = 0
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labelOutlet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

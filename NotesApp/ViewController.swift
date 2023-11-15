@@ -8,6 +8,8 @@
 import UIKit
 
 var num = 0
+var random = 11
+var rand = ""
 
 class ViewController: UIViewController {
 
@@ -21,5 +23,8 @@ class ViewController: UIViewController {
 /// woah
     ///
     /// hello qorld
+    ///
+    /// new comment
+    /// lol
 }
 

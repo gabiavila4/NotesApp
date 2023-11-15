@@ -24,7 +24,7 @@
                                     <fragment content="Notes App">
                                         <attributes>
                                             <color key="NSColor" red="0.041104975576609123" green="0.10623389175257736" blue="0.065145342624278943" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="36" name=".SFNS-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -73,6 +73,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mQr-Jh-poA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AIQ-ln-2Mz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.01187241069" green="0.10623389179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

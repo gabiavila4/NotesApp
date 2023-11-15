@@ -52,12 +52,15 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-VJ-fdA">
-                                <rect key="frame" x="158" y="535" width="78" height="35"/>
+                                <rect key="frame" x="158" y="535" width="78" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.041104975580000001" green="0.10623389179999999" blue="0.065145342620000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="submitAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fuX-xi-mtH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,7 +69,10 @@
                     <tabBarItem key="tabBarItem" title="Home" selectedImage="house" catalog="system" id="xPH-vM-mi1"/>
                     <navigationItem key="navigationItem" id="zGv-m0-rC3"/>
                     <connections>
+                        <outlet property="dayOutlet" destination="vEJ-V9-yjy" id="UyG-f8-h2R"/>
                         <outlet property="labelOutlet" destination="04Z-Zt-D5T" id="8R6-8C-f6k"/>
+                        <outlet property="monthOutlet" destination="v29-qz-3Dj" id="K9b-2J-yo2"/>
+                        <outlet property="yearOutlet" destination="vEJ-V9-yjy" id="9sC-ee-baZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

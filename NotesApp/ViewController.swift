@@ -6,14 +6,20 @@
 //
 
 
-class AppData{
-   // static var month : String
+public class AppData{
+ 
+    static var month = ""
+    static var year = ""
+    static var day = ""
+    static var notesArray = [String]()
     
-  //  static var day : String
+   
+    }
     
-  //  static var year : String
     
-}
+    
+    
+
 
 import UIKit
 
@@ -48,7 +54,9 @@ class ViewController: UIViewController {
 
     @IBAction func submitAction(_ sender: UIButton) {
         
-        
+        AppData.month = monthOutlet.text!
+        AppData.day = dayOutlet.text!
+        AppData.year = yearOutlet.text!
         
     }
     

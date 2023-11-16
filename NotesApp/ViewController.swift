@@ -8,9 +8,9 @@
 
 public class AppData{
      
-    static var month = ""
-    static var year = ""
-    static var day = ""
+    static var cmonth = ""
+    static var cyear = ""
+    static var cday = ""
     static var notesArray = [Notes]()
     
    
@@ -54,9 +54,9 @@ class ViewController: UIViewController {
 
     @IBAction func submitAction(_ sender: UIButton) {
         
-        AppData.month = monthOutlet.text!
-        AppData.day = dayOutlet.text!
-        AppData.year = yearOutlet.text!
+        AppData.cmonth = monthOutlet.text!
+        AppData.cday = dayOutlet.text!
+        AppData.cyear = yearOutlet.text!
         
     }
     

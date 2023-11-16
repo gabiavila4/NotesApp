@@ -158,6 +158,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system"/>
+                                <connections>
+                                    <action selector="addAction:" destination="9X4-nw-5Oe" eventType="touchUpInside" id="1Rd-p7-2cT"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-nI-fzz">
                                 <rect key="frame" x="199" y="58" width="138" height="34"/>
@@ -191,6 +194,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Collection" image="shippingbox.fill" catalog="system" id="eiz-DM-d3w"/>
                     <connections>
+                        <outlet property="dayTFOutlet" destination="yI1-eK-scq" id="jKA-bq-n6b"/>
+                        <outlet property="monthTFOutlet" destination="dt2-uP-FEQ" id="fa7-61-Bg4"/>
+                        <outlet property="nameTFOutlet" destination="oLc-nI-fzz" id="rbd-u4-psf"/>
+                        <outlet property="tableViewOutlet" destination="qgQ-bs-XjL" id="Ew8-Qa-ez5"/>
                         <segue destination="mcr-BV-RNf" kind="show" id="Vqz-4Z-cYK"/>
                     </connections>
                 </viewController>

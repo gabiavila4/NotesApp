@@ -7,23 +7,39 @@
 
 import UIKit
 
-class ViewController3: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var nameTFOutlet: UITextField!
+    
+    @IBOutlet weak var dayTFOutlet: UITextField!
+    
+    @IBOutlet weak var monthTFOutlet: UITextField!
+    
+    @IBOutlet weak var tableViewOutlet: UITableView!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableViewOutlet.dataSource = self
+        tableViewOutlet.delegate = self
+       
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    @IBAction func addAction(_ sender: UIButton) {
+        
+        
+        
+    }
+    
+    
 
 }

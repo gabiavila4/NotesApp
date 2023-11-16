@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		676D7AEB2B066CF800C6C789 /* datesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676D7AEA2B066CF800C6C789 /* datesArray.swift */; };
+		C88D46122B066EDC00BCAA00 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D46112B066EDC00BCAA00 /* Cell.swift */; };
 		C8C5A3B52B051B0A007F41F2 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5A3B42B051B0A007F41F2 /* ViewController2.swift */; };
 		C8C5A3B72B051B35007F41F2 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5A3B62B051B35007F41F2 /* ViewController3.swift */; };
 		C8C5A3B92B051B51007F41F2 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5A3B82B051B51007F41F2 /* ViewController4.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		676D7AEA2B066CF800C6C789 /* datesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datesArray.swift; sourceTree = "<group>"; };
+		C88D46112B066EDC00BCAA00 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		C8C5A3B42B051B0A007F41F2 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		C8C5A3B62B051B35007F41F2 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		C8C5A3B82B051B51007F41F2 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		C8FADEB02B03C51F00919287 = {
 			isa = PBXGroup;
 			children = (
+				C88D46112B066EDC00BCAA00 /* Cell.swift */,
 				C8C5A3B42B051B0A007F41F2 /* ViewController2.swift */,
 				C8FADEBB2B03C51F00919287 /* NotesApp */,
 				C8FADED52B03C52100919287 /* NotesAppTests */,
@@ -278,6 +281,7 @@
 				C8FADEC12B03C51F00919287 /* ViewController.swift in Sources */,
 				676D7AEB2B066CF800C6C789 /* datesArray.swift in Sources */,
 				C8C5A3B72B051B35007F41F2 /* ViewController3.swift in Sources */,
+				C88D46122B066EDC00BCAA00 /* Cell.swift in Sources */,
 				C8FADEBD2B03C51F00919287 /* AppDelegate.swift in Sources */,
 				C8FADEBF2B03C51F00919287 /* SceneDelegate.swift in Sources */,
 				C8FADEC72B03C51F00919287 /* NotesApp.xcdatamodeld in Sources */,

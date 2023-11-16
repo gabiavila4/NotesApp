@@ -28,11 +28,17 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        AppData.notesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! Cell
+        cell.nameOutlet.text = AppData.notesArray[indexPath.row].name
+        cell.monthOutlet.text = "\(AppData.notesArray[indexPath.row].month)"
+        cell.dayOutlet.text = "\(AppData.notesArray[indexPath.row].day)"
+        
+        return cell
+        
     }
     @IBAction func addAction(_ sender: UIButton) {
         //hi

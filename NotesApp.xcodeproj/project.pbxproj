@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		676D7AEB2B066CF800C6C789 /* datesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676D7AEA2B066CF800C6C789 /* datesArray.swift */; };
 		C8C5A3B52B051B0A007F41F2 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5A3B42B051B0A007F41F2 /* ViewController2.swift */; };
 		C8C5A3B72B051B35007F41F2 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5A3B62B051B35007F41F2 /* ViewController3.swift */; };
 		C8C5A3B92B051B51007F41F2 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C5A3B82B051B51007F41F2 /* ViewController4.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		676D7AEA2B066CF800C6C789 /* datesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datesArray.swift; sourceTree = "<group>"; };
 		C8C5A3B42B051B0A007F41F2 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		C8C5A3B62B051B35007F41F2 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		C8C5A3B82B051B51007F41F2 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				C8FADEBE2B03C51F00919287 /* SceneDelegate.swift */,
 				C8FADEC02B03C51F00919287 /* ViewController.swift */,
 				C8FADEC22B03C51F00919287 /* Main.storyboard */,
+				676D7AEA2B066CF800C6C789 /* datesArray.swift */,
 				C8C5A3B82B051B51007F41F2 /* ViewController4.swift */,
 				C8C5A3B62B051B35007F41F2 /* ViewController3.swift */,
 				C8FADEC82B03C52100919287 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 				C8C5A3B52B051B0A007F41F2 /* ViewController2.swift in Sources */,
 				C8C5A3B92B051B51007F41F2 /* ViewController4.swift in Sources */,
 				C8FADEC12B03C51F00919287 /* ViewController.swift in Sources */,
+				676D7AEB2B066CF800C6C789 /* datesArray.swift in Sources */,
 				C8C5A3B72B051B35007F41F2 /* ViewController3.swift in Sources */,
 				C8FADEBD2B03C51F00919287 /* AppDelegate.swift in Sources */,
 				C8FADEBF2B03C51F00919287 /* SceneDelegate.swift in Sources */,

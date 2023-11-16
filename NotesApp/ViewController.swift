@@ -7,11 +7,11 @@
 
 
 public class AppData{
- 
+     
     static var month = ""
     static var year = ""
     static var day = ""
-    static var notesArray = [String]()
+    static var notesArray = [Notes]()
     
    
     }

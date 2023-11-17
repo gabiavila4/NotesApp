@@ -22,6 +22,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
        
@@ -41,9 +42,25 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     @IBAction func addAction(_ sender: UIButton) {
-        //hi
         
+        var n2 = ""
+        var d2 = 0
+        var m2 = 0
         
+        if let n = nameTFOutlet.text{
+        n2 = n
+        }
+        if let d = Int(dayTFOutlet.text!)
+        {
+        d2 = d
+        }
+        if let m = Int(monthTFOutlet.text!){
+        m2 = m
+        }
+        
+        var n1 = Notes(name: n2, day: d2, month: m2)
+        AppData.notesArray.append(n1)
+        self.tableViewOutlet.reloadData()
         
     }
     

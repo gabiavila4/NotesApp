@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mQr-Jh-poA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="2916.7938931297708" y="3.5211267605633805"/>
         </scene>
-        <!--Table-->
+        <!--Collection-->
         <scene sceneID="UEa-Lq-T5I">
             <objects>
                 <viewController id="2ZC-3w-0lv" customClass="ViewController2" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -125,13 +125,13 @@
                             <constraint firstItem="KPF-XH-VZ1" firstAttribute="trailing" secondItem="xCc-m0-V9U" secondAttribute="trailing" id="uBZ-ds-z9S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Table" image="tablecells" catalog="system" id="dVM-Ml-SsZ"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="cube.box.fill" catalog="system" id="dVM-Ml-SsZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UY7-fk-iTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2103" y="739"/>
         </scene>
-        <!--Collection-->
+        <!--Table-->
         <scene sceneID="4aX-W6-fNm">
             <objects>
                 <viewController id="9X4-nw-5Oe" customClass="ViewController3" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,7 +228,7 @@
                             <constraint firstItem="qgQ-bs-XjL" firstAttribute="bottom" secondItem="848-UM-xfj" secondAttribute="bottom" id="qc9-6S-4HT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Collection" image="shippingbox.fill" catalog="system" id="eiz-DM-d3w"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="tablecells" catalog="system" id="eiz-DM-d3w"/>
                     <connections>
                         <outlet property="dayTFOutlet" destination="yI1-eK-scq" id="jKA-bq-n6b"/>
                         <outlet property="monthTFOutlet" destination="dt2-uP-FEQ" id="fa7-61-Bg4"/>
@@ -316,9 +316,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cube.box.fill" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
-        <image name="shippingbox.fill" catalog="system" width="128" height="123"/>
         <image name="tablecells" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

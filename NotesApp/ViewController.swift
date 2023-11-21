@@ -12,7 +12,7 @@ public class AppData{
     static var cyear = ""
     static var cday = ""
     static var notesArray = [Notes]()
-    
+    let defaults = UserDefaults.standard
    
     }
     

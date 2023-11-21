@@ -64,6 +64,21 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
+    //delete
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            AppData.notesArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    
+    @IBAction func saveAction(_ sender: UIButton) {
+        
+        
+        
+        
+    }
     
 
 }

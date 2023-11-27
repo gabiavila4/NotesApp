@@ -63,15 +63,15 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
-  //  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     //   let cell = tableView.cellForRow(at: indexPath) as! Cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! Cell
         
-     //   AppData.sname = cell.nameOutlet.text!
-     //   AppData.smonth = cell.monthOutlet.text!
-     //   AppData.sday = cell.dayOutlet.text!
+        AppData.sname = cell.nameOutlet.text!
+        AppData.smonth = cell.monthOutlet.text!
+        AppData.sday = cell.dayOutlet.text!
         
-     //   performSegue(withIdentifier: "toScreen4", sender: self)
-        
+        performSegue(withIdentifier: "toScreen4", sender: self)
+    }
     //delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{

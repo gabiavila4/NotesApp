@@ -7,23 +7,29 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
-
+class ViewController2: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+   
+    @IBOutlet weak var collectionOutlet: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        collectionOutlet.delegate = self
+        collectionOutlet.dataSource = self
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return AppData.notesArray.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        cell.
+        
+    }
+    
+return cell
+    
 }

@@ -126,6 +126,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Collection" image="cube.box.fill" catalog="system" id="dVM-Ml-SsZ"/>
+                    <connections>
+                        <outlet property="collectionOutlet" destination="xCc-m0-V9U" id="SE3-8I-kzj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UY7-fk-iTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

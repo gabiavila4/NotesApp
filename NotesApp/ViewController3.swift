@@ -10,7 +10,7 @@ import UIKit
 class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-
+    
     @IBOutlet weak var nameTFOutlet: UITextField!
     
     @IBOutlet weak var dayTFOutlet: UITextField!
@@ -19,13 +19,21 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
-       
+        
+        if let items = defaults.data(forKey: "theNotes") {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([Notes].self, from: items) {
+                AppData.notesArray = decoded
+            }
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,14 +56,14 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         var m2 = 0
         
         if let n = nameTFOutlet.text{
-        n2 = n
+            n2 = n
         }
         if let d = Int(dayTFOutlet.text!)
         {
-        d2 = d
+            d2 = d
         }
         if let m = Int(monthTFOutlet.text!){
-        m2 = m
+            m2 = m
         }
         
         AppData.notesArray.append(Notes(name: n2, day: d2, month: m2))
@@ -63,15 +71,15 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
-  //  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     //   let cell = tableView.cellForRow(at: indexPath) as! Cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! Cell
         
-     //   AppData.sname = cell.nameOutlet.text!
-     //   AppData.smonth = cell.monthOutlet.text!
-     //   AppData.sday = cell.dayOutlet.text!
+        AppData.sname = cell.nameOutlet.text!
+        AppData.smonth = cell.monthOutlet.text!
+        AppData.sday = cell.dayOutlet.text!
         
-     //   performSegue(withIdentifier: "toScreen4", sender: self)
-        
+        performSegue(withIdentifier: "toScreen4", sender: self)
+    }
     //delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
@@ -83,10 +91,12 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBAction func saveAction(_ sender: UIButton) {
         
-        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.notesArray) {
+            defaults.set(encoded, forKey: "theNotes")
+            
+        }
         
         
     }
-    
-
 }

@@ -15,6 +15,7 @@ public class AppData{
     static var sname = ""
     static var smonth = ""
     static var sday = ""
+    let defaults = UserDefaults.standard
    
     }
     

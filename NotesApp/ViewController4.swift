@@ -7,23 +7,62 @@
 
 import UIKit
 
-class ViewController4: UIViewController {
+class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    let imagePicker = UIImagePickerController()
 
+    @IBOutlet weak var nameOutlet: UILabel!
+    
+    @IBOutlet weak var dateOutlet: UILabel!
+    
+    @IBOutlet weak var imageOutlet: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imagePicker.delegate = self
+        
+        nameOutlet.text = AppData.sname
+        dateOutlet.text = AppData.smonth + "/" + AppData.sday
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cameraAction(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            
+            present(imagePicker, animated: true)
+        }
+        else{
+            
+            
+            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            
+            present(imagePicker, animated: true)
+            
+        }
     }
-    */
+    
+    
+    
+    @IBAction func photoAction(_ sender: UIButton) {
+        
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        
+        present(imagePicker, animated: true)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true){
+            
+            self.imageOutlet.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+            
+        }
+    }
+
+    
 
 }

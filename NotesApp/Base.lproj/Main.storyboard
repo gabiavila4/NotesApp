@@ -234,7 +234,7 @@
                         <outlet property="monthTFOutlet" destination="dt2-uP-FEQ" id="fa7-61-Bg4"/>
                         <outlet property="nameTFOutlet" destination="oLc-nI-fzz" id="rbd-u4-psf"/>
                         <outlet property="tableViewOutlet" destination="qgQ-bs-XjL" id="Ew8-Qa-ez5"/>
-                        <segue destination="mcr-BV-RNf" kind="show" id="Vqz-4Z-cYK"/>
+                        <segue destination="mcr-BV-RNf" kind="show" identifier="toScreen4" id="Vqz-4Z-cYK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4p-MZ-8K8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,6 +270,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraAction:" destination="mcr-BV-RNf" eventType="touchUpInside" id="tgR-Ja-rLZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sG-VI-NHE">
                                 <rect key="frame" x="202" y="658" width="191" height="183"/>
@@ -278,16 +281,31 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Photos"/>
+                                <connections>
+                                    <action selector="photoAction:" destination="mcr-BV-RNf" eventType="touchUpInside" id="bzL-Xg-qAr"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3J-KK-KGv">
                                 <rect key="frame" x="46" y="187" width="304" height="381"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-xx-7MC">
+                                <rect key="frame" x="144" y="598" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0nH-AV-19x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="8kT-dg-uaj"/>
+                    <connections>
+                        <outlet property="dateOutlet" destination="biX-1o-wIT" id="vwR-X6-i9R"/>
+                        <outlet property="imageOutlet" destination="Y3J-KK-KGv" id="mdq-nq-I3q"/>
+                        <outlet property="nameOutlet" destination="C0R-td-jR5" id="Wo6-1w-ldD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVu-8g-As1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

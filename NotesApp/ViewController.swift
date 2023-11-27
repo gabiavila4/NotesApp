@@ -12,7 +12,9 @@ public class AppData{
     static var cyear = ""
     static var cday = ""
     static var notesArray = [Notes]()
-    
+    static var sname = ""
+    static var smonth = ""
+    static var sday = ""
    
     }
     

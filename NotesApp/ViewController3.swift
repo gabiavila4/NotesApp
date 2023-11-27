@@ -58,9 +58,21 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         m2 = m
         }
         
-        var n1 = Notes(name: n2, day: d2, month: m2)
-        AppData.notesArray.append(n1)
+        AppData.notesArray.append(Notes(name: n2, day: d2, month: m2))
         self.tableViewOutlet.reloadData()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! Cell
+        
+        AppData.sname = cell.nameOutlet.text!
+        AppData.smonth = cell.monthOutlet.text!
+        AppData.sday = cell.dayOutlet.text!
+        
+        performSegue(withIdentifier: "toScreen4", sender: self)
+        
+        
         
     }
     

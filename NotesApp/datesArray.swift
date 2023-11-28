@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Notes{
+public class Notes: Codable{
     var name : String
     var day : Int
     var month : Int

@@ -63,6 +63,6 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
         }
     }
 
-    
+   // AppData.ourImages.append()
 
 }

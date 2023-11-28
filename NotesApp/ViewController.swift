@@ -16,6 +16,8 @@ public class AppData{
     static var smonth = ""
     static var sday = ""
     let defaults = UserDefaults.standard
+    static var ourImages : Array<UIImage> = []
+    
    
     }
     

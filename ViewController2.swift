@@ -26,10 +26,12 @@ class ViewController2: UIViewController,UICollectionViewDelegate,UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
-        cell.
+        
+        //  var imageview: UIImageView = UIImageView(frame: CGRect(x: 50, y: 50, width: 50, height: 50))
+        //   var img : UIImage = UIImage(named: <#T##String#>)
+        return cell
         
     }
     
-return cell
     
 }

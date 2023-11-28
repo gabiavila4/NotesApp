@@ -28,6 +28,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         tableViewOutlet.delegate = self
         
         if let items = defaults.data(forKey: "theNotes") {
+            print("found")
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([Notes].self, from: items) {
                 AppData.notesArray = decoded
@@ -88,6 +89,23 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
+    //check and uncheck
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        
+    if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
+            }
+    else {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            }
+            
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
+    
     
     @IBAction func saveAction(_ sender: UIButton) {
         
@@ -96,7 +114,9 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
             defaults.set(encoded, forKey: "theNotes")
             
         }
-        
-        
     }
+        
+    
+        
+    
 }

@@ -193,7 +193,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRQ-c7-0Nq">
-                                <rect key="frame" x="344" y="57" width="49" height="35"/>
+                                <rect key="frame" x="344" y="67" width="49" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system"/>
@@ -202,25 +202,25 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-nI-fzz">
-                                <rect key="frame" x="208" y="58" width="138" height="34"/>
+                                <rect key="frame" x="208" y="67" width="138" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Day..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yI1-eK-scq">
-                                <rect key="frame" x="133" y="57" width="67" height="34"/>
+                                <rect key="frame" x="133" y="67" width="67" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Month..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dt2-uP-FEQ">
-                                <rect key="frame" x="53" y="57" width="72" height="34"/>
+                                <rect key="frame" x="53" y="67" width="72" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPz-aO-hgq">
-                                <rect key="frame" x="5" y="57" width="49" height="35"/>
+                                <rect key="frame" x="0.0" y="66" width="49" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system"/>
@@ -228,6 +228,13 @@
                                     <action selector="saveAction:" destination="9X4-nw-5Oe" eventType="touchUpInside" id="U6t-TW-KdA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrs-Nn-09u">
+                                <rect key="frame" x="53" y="43" width="310" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="848-UM-xfj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -243,6 +250,7 @@
                     <tabBarItem key="tabBarItem" title="Table" image="tablecells" catalog="system" id="eiz-DM-d3w"/>
                     <connections>
                         <outlet property="dayTFOutlet" destination="yI1-eK-scq" id="jKA-bq-n6b"/>
+                        <outlet property="labelOutlet" destination="Jrs-Nn-09u" id="Il6-bT-pRW"/>
                         <outlet property="monthTFOutlet" destination="dt2-uP-FEQ" id="fa7-61-Bg4"/>
                         <outlet property="nameTFOutlet" destination="oLc-nI-fzz" id="rbd-u4-psf"/>
                         <outlet property="tableViewOutlet" destination="qgQ-bs-XjL" id="Ew8-Qa-ez5"/>

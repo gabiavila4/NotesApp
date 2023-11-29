@@ -11,11 +11,13 @@ public class Notes: Codable{
     var name : String
     var day : Int
     var month : Int
+    
 
     init(name: String, day: Int, month: Int) {
         self.name = name
         self.day = day
         self.month = month
+        
     }
     
     

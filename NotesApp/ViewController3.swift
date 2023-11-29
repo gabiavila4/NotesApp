@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    var count = 0
     
     @IBOutlet weak var nameTFOutlet: UITextField!
     
@@ -18,6 +18,8 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var monthTFOutlet: UITextField!
     
     @IBOutlet weak var tableViewOutlet: UITableView!
+    
+    @IBOutlet weak var labelOutlet: UILabel!
     
     let defaults = UserDefaults.standard
     
@@ -69,7 +71,14 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         AppData.notesArray.append(Notes(name: n2, day: d2, month: m2))
         self.tableViewOutlet.reloadData()
-        
+        count = 0
+        for blah in AppData.notesArray{
+            if Int(blah.month) == Int(AppData.cmonth){
+                count = count + 1
+            }
+            
+        }
+        labelOutlet.text = "You have \(count) assignments due this month!"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -89,6 +98,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
+    
     //check and uncheck
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         
@@ -102,6 +112,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
             }
             
         tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     
     
@@ -114,8 +125,13 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
             defaults.set(encoded, forKey: "theNotes")
             
         }
+        
     }
         
+
+   
+   
+    
     
         
     

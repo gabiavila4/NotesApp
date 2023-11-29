@@ -97,7 +97,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kma-Vx-eNs">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="kma-Vx-eNs" customClass="myCell" customModule="NotesApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wYl-wU-z31">
@@ -110,6 +110,9 @@
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageOutlet" destination="IFk-tM-Kbr" id="8ga-ke-uRZ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -126,7 +129,6 @@
                     <tabBarItem key="tabBarItem" title="Collection" image="cube.box.fill" catalog="system" id="dVM-Ml-SsZ"/>
                     <connections>
                         <outlet property="collectionOutlet" destination="xCc-m0-V9U" id="SE3-8I-kzj"/>
-                        <outlet property="imageOutlet" destination="IFk-tM-Kbr" id="b1F-vM-f05"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UY7-fk-iTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

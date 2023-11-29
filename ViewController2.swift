@@ -20,27 +20,36 @@ class ViewController2: UIViewController,UICollectionViewDelegate,UICollectionVie
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        collectionOutlet.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return AppData.imgArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! 
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! myCell
         
         let image = AppData.imgArray[indexPath.row]
         
         cell.imageOutlet.image = image
+        
+        
         
         return cell
         
     }
    
     
-   public class colllectionCell: UICollectionViewCell{
-        
-    }
+
+    
+    
+}
+
+public class myCell: UICollectionViewCell{
     
     @IBOutlet weak var imageOutlet: UIImageView!
     
     
-}
+ }

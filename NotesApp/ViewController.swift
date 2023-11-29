@@ -6,7 +6,7 @@
 //
 
 
-public class AppData{
+public class AppData {
      
     static var cmonth = ""
     static var cyear = ""
@@ -20,9 +20,12 @@ public class AppData{
     
    
     }
+
+override func UIImage{
     
     
     
+}
     
 
 

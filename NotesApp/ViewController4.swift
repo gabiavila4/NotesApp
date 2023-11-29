@@ -12,7 +12,7 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
     let defaults = UserDefaults.standard
     
     let imagePicker = UIImagePickerController()
-
+    
     @IBOutlet weak var nameOutlet: UILabel!
     
     @IBOutlet weak var dateOutlet: UILabel!
@@ -23,17 +23,33 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         imagePicker.delegate = self
         
         nameOutlet.text = AppData.sname
         dateOutlet.text = AppData.smonth + "/" + AppData.sday
         
-        if let imageData = defaults.value(forKey: "photo") as? NSData {
-            if let image = UIImage(data:imageData as Data) as? UIImage {
-                imageOutlet.image = image
+        if let imageData = defaults.value(forKey: "photo2") as? [NSData] {
+            
+            for i in imageData{
+                
+                if let image = UIImage(data:i as Data) as? UIImage {
+                    AppData.imgArray.append(image)
+                    
+                }
+                
+                
             }
         }
+        
+        if let items = defaults.data(forKey: "photo2") {
+            print("found")
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([Notes].self, from: items) {
+                AppData.imgArray = decoded
+            }
+        }
+        
         
     }
     
@@ -59,6 +75,8 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
         
         imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
         
+        
+        
         present(imagePicker, animated: true)
         
     }
@@ -71,14 +89,18 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
             AppData.imgArray.append(info[UIImagePickerController.InfoKey.originalImage] as! UIImage)
             
             // saving the image
-            let imgData = self.imageOutlet.image!.jpegData(compressionQuality: 1)
-            self.defaults.setValue(imgData, forKey: "photo")
+            
+            //            let imgData = self.imageOutlet.image!.jpegData(compressionQuality: 1)
+            //            self.defaults.set(AppData.imgArray, forKey: "photo2")
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(AppData.imgArray) {
+                defaults.set(encoded, forKey: "photo2")
+            }
+            
             
         }
         
+        // AppData.ourImages.append()
         
     }
-
-   // AppData.ourImages.append()
-
 }

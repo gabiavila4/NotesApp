@@ -76,7 +76,7 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
             if Int(blah.month) == Int(AppData.cmonth){
                 count = count + 1
             }
-            
+           //hi
         }
         labelOutlet.text = "You have \(count) assignments due this month!"
     }

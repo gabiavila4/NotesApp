@@ -10,7 +10,7 @@ import UIKit
 class ViewController2: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
    
     @IBOutlet weak var collectionOutlet: UICollectionView!
-    
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +21,26 @@ class ViewController2: UIViewController,UICollectionViewDelegate,UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppData.notesArray.count
+        return AppData.imgArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! 
         
-        //  var imageview: UIImageView = UIImageView(frame: CGRect(x: 50, y: 50, width: 50, height: 50))
-        //   var img : UIImage = UIImage(named: <#T##String#>)
+        let image = AppData.imgArray[indexPath.row]
+        
+        cell.imageOutlet.image = image
+        
         return cell
         
     }
+   
+    
+   public class colllectionCell: UICollectionViewCell{
+        
+    }
+    
+    @IBOutlet weak var imageOutlet: UIImageView!
     
     
 }

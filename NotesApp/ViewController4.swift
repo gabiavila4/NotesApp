@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
+    let defaults = UserDefaults.standard
+    
     let imagePicker = UIImagePickerController()
 
     @IBOutlet weak var nameOutlet: UILabel!
@@ -26,6 +28,12 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
         
         nameOutlet.text = AppData.sname
         dateOutlet.text = AppData.smonth + "/" + AppData.sday
+        
+        if let imageData = defaults.value(forKey: "photo") as? NSData {
+            if let image = UIImage(data:imageData as Data) as? UIImage {
+                imageOutlet.image = image
+            }
+        }
         
     }
     
@@ -60,7 +68,15 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
             
             self.imageOutlet.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
             
+            AppData.imgArray.append(info[UIImagePickerController.InfoKey.originalImage] as! UIImage)
+            
+            // saving the image
+            let imgData = self.imageOutlet.image!.jpegData(compressionQuality: 1)
+            self.defaults.setValue(imgData, forKey: "photo")
+            
         }
+        
+        
     }
 
    // AppData.ourImages.append()

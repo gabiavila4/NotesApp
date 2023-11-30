@@ -21,12 +21,6 @@ public class AppData {
    
     }
 
-override func UIImage{
-    
-    
-    
-}
-    
 
 
 import UIKit

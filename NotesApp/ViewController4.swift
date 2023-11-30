@@ -42,13 +42,13 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
             }
         }
         
-        if let items = defaults.data(forKey: "photo2") {
-            print("found")
-            let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode([Notes].self, from: items) {
-                AppData.imgArray = decoded
-            }
-        }
+        //        if let items = defaults.data(forKey: "photo2") {
+        //            print("found")
+        //            let decoder = JSONDecoder()
+        //            if let decoded = try? decoder.decode([Notes].self, from: items) {
+        //                AppData.imgArray
+        //            }
+        //        }
         
         
     }
@@ -90,17 +90,21 @@ class ViewController4: UIViewController,UIImagePickerControllerDelegate,UINaviga
             
             // saving the image
             
-            //            let imgData = self.imageOutlet.image!.jpegData(compressionQuality: 1)
-            //            self.defaults.set(AppData.imgArray, forKey: "photo2")
-            let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(AppData.imgArray) {
-                defaults.set(encoded, forKey: "photo2")
-            }
+            let imgData = self.imageOutlet.image!.jpegData(compressionQuality: 1)
+            self.defaults.set(AppData.imgArray, forKey: "photo2")
             
+            
+            
+            //            let encoder = JSONEncoder()
+            //            if let encoded = try? encoder.encode(AppData.imgArray) {
+            //                defaults.set(encoded, forKey: "photo2")
+            //            }
+            //
+            //
+            //        }
+            
+            // AppData.ourImages.append()
             
         }
-        
-        // AppData.ourImages.append()
-        
     }
 }
